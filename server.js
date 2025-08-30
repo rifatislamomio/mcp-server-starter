@@ -14,7 +14,7 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
-server.tool(...getDailyExpenseByDateTool);
+server.tool(getDailyExpenseByDateTool);
 
 const init = async () => {
   const transport = new StdioServerTransport();

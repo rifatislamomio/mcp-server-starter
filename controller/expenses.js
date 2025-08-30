@@ -1,4 +1,6 @@
-const getDailyExpenseRecordByDate = async ({date}) => {
+import Expense from "../model/Expense.js"; 
+
+export const getDailyExpenseRecordByDate = async ({ date }) => {
   try {
     const expenses = await Expense.getExpenseListByDate(date);
     if (expenses.length > 0) {
@@ -19,5 +21,3 @@ const getDailyExpenseRecordByDate = async ({date}) => {
     console.log(JSON.stringify(error));
   }
 };
-
-module.exports = { getDailyExpenseRecordByDate };

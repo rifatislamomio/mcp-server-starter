@@ -1,6 +1,7 @@
-const { getDailyExpenseRecordByDate } = require("./controller/expenses");
+import { getDailyExpenseRecordByDate } from "./controller/expenses.js";
+import { z } from "zod";
 
-const getDailyExpenseByDateTool = {
+export const getDailyExpenseByDateTool = {
   name: "getDailyExpenseByDate",
   description: "Get daily expenses for a specific date",
   schema: {
@@ -13,5 +14,3 @@ const getDailyExpenseByDateTool = {
     return data;
   },
 };
-
-module.exports = { getDailyExpenseByDateTool };
