@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const schema = new mongoose.Schema(
   {
@@ -30,4 +30,6 @@ schema.statics.getExpenseListByDate = function (expenseDate = new Date()) {
   });
 };
 
-module.exports = mongoose.model("Expense", schema);
+const expense = mongoose.model("Expense", schema);
+
+export default expense;

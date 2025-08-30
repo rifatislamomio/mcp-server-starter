@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "myExpenseData": {
+      "command": "node",
+      "args": ["C:/Users/Desktop/Desktop/mcp-server-starter/server.js"],
+      "env": {
+        "MONGODB_URI": "mongodb+srv://admin:"
+      }
+    }
+  },
+  "inputs": []
+}
